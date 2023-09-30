@@ -3,7 +3,7 @@ import json
 from plotly.graph_objs import Scattergeo, Layout
 from plotly import offline
 
-filename = "data/eq_data_30_day_m1.geojson"
+filename = "Earthshake/data/eq_data_30_day_m1.geojson"
 
 with open(filename,encoding="utf-8") as f:
     all_eq_data = json.load(f)
@@ -37,4 +37,4 @@ data = [{
 my_layout = Layout(title="Global Earthshakes")
 
 fig = {"data" : data, "layout" : my_layout}
-offline.plot(fig, filename="Tables/global_earthshakes.html")
+offline.plot(fig, filename="Earthshake/Tables/global_earthshakes.html")
